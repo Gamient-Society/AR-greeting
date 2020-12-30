@@ -11,6 +11,7 @@ On coming New Year🎉🎈, our website AR-greetings allows people to share digi
 - restdb.io
 - EchoAR
 - A-Frame
+- WebXR
 
 ## A sneek peek into what we have :
 - Login page:
