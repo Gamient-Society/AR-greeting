@@ -14,11 +14,11 @@ On coming New Year🎉🎈, our website AR-greetings allows people to share digi
 - WebXR
 
 ## A sneek peek into what we have :
-- Login page:
+- ### Login page:
 <p align="center"><img src="Project Snapshots/img1.jpeg" width = 80%></p>
 <p align="center"><img src="Project Snapshots/img3.jpeg" width = 80%></p>
 
-- AR Greeting Cards:
+- ### AR Greeting Cards:
 <p align="center"><img src="Project Snapshots/img2.jpeg" width = 80%></p>
 
 ## How to use :
