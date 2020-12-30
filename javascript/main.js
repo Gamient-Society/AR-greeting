@@ -14,7 +14,7 @@ let hologramNames = [];
 fetch("https://console.echoar.xyz//query?key=" + apiKey).then(res => res.json()).then((out) => {
     console.log(out);
     for (key in out['db']) {
-        if ('Balloon.glb' == out['db'][key]['hologram']['filename']) {
+        if ('Balloons.glb' == out['db'][key]['hologram']['filename']) {
             const storageID = out['db'][key]['hologram']['storageID'];
             const modelFileLink = "https://console.echoar.xyz//query?key=" + apiKey + "&file=" + storageID;
             
@@ -46,16 +46,29 @@ fetch("https://console.echoar.xyz//query?key=" + apiKey).then(res => res.json())
 });
 
 //CHANGING THE TEXT OF GREETING
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const str = urlParams.get('id');
+const db = new restdb("5fec198a823229477922c59b")
+const urlParams = new URLSearchParams(window.location.search);
 
-var text = document.createElement("a-text");
-text.setAttribute('value','Happy New Year \n'+ str);
-text.setAttribute('position','0 2 -4');
-text.setAttribute('scale','2 2 2');
-text.setAttribute('font','https://cdn.aframe.io/fonts/Exo2Bold.fnt')
-text.setAttribute('align','center')
-text.setAttribute('look-at','[camera]')
+var query = {};
+var hints = {};
 
-document.querySelector('a-scene').appendChild(text);
+db.nameid.find(query, hints, (err, res) => {
+    if (!err) {
+        res.forEach(item => {
+            if(item['id'] = urlParams.get('id')) {
+                createTextElement(res[0]['name']);
+            }
+        });
+    }
+})
+
+function createTextElement(str) {
+    var text = document.createElement("a-text");
+    text.setAttribute('value', 'Happy New Year \n' + str);
+    text.setAttribute('position', '0 2 -4');
+    text.setAttribute('scale', '2 2 2');
+    text.setAttribute('font', 'https://cdn.aframe.io/fonts/Exo2Bold.fnt')
+    text.setAttribute('align', 'center')
+
+    document.querySelector('a-scene').appendChild(text);
+}
