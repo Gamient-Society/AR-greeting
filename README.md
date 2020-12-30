@@ -13,8 +13,8 @@ On coming New Year🎉🎈, our website AR-greetings allows people to share digi
 - A-Frame
 
 ## A sneek peek into what we have :
-<p align="center"><img src="Screenshots/img1" width = 40%></p>
-<p align="center"><img src="Screenshots/img2" width = 40%></p>
+<p align="center"><img src="Project Snapshots/img1" width = 40%></p>
+<p align="center"><img src="Project Snapshots/img2" width = 40%></p>
 
 ## How to use :
 Just enter the name of the person you want to send the Greeting cards and share the link📎 .
