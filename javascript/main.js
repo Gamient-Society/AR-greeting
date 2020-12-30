@@ -54,14 +54,15 @@ var hints = {};
 
 db.nameid.find(query, hints, (err, res) => {
     if (!err) {
-        res.forEach(item => {
-            if(item['id'] = urlParams.get('id')) {
-                createTextElement(res[0]['name']);
+        for(var i=0;i<res.length;i++)
+        {
+            if(res[i]['id'] == urlParams.get('id'))
+            {
+                createTextElement(res[i]['name']);
             }
-        });
+        }
     }
 })
-
 function createTextElement(str) {
     var text = document.createElement("a-text");
     text.setAttribute('value', 'Happy New Year \n' + str);
