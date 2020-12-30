@@ -1,6 +1,7 @@
 let key; //Var to store HashCode
 let savedName = "";
 let decoded ;
+let user = 0;
 //decoderSectionSTART
 //func. to encode the input
 function setName(name){
@@ -26,7 +27,11 @@ function encoder(name, length){
     console.log(temp);
     return temp;
   }
-
+function keyGen(){
+    let number = Math. floor(100000 + Math. random() * 900000 + user);
+    user++;
+    return number;
+}
 //function to decode the hashKey
   function decoder(key , length){
     let temp = 0;
@@ -47,8 +52,18 @@ function encoder(name, length){
     let input = $(ok).val();
     setName(input);
     let length = input.length;
-    key = encoder(input, length);
+    key = keyGen();
+    $("#path").val("");
+    $("#path").val("https://gamient-society.github.io/AR-greeting/view/?id="+ key)
+    $("#path").focus();
+    $("#path").select();
+
+    try {
+      var successful = document.execCommand('copy');
+      var msg = successful ? 'successful' : 'unsuccessful';
+      console.log('Copying text command was ' + msg);
+    } catch (err) {
+      console.log('Oops, unable to copy');
+    }
   });
-
-
   console.log(key);

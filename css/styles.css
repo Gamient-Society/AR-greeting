@@ -55,6 +55,14 @@ p{
   padding: 5% 7%;
 }
 
+.box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#gen{
+
+}
 .About-text{
   color:#fff;
   line-height: 1.5;
