@@ -15,4 +15,4 @@ On coming New Year🎉🎈, our website AR-greetings allows people to share digi
 ## How to use
 Just enter the name of the person you want to send the Greeting cards and share the link📎 .
 
-### <i>Hope you like it ❤️</>.
+### <i>Hope you like it ❤️.
