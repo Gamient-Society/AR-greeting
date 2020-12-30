@@ -55,14 +55,6 @@ p{
   padding: 5% 7%;
 }
 
-.box{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-#gen{
-
-}
 .About-text{
   color:#fff;
   line-height: 1.5;
@@ -148,13 +140,13 @@ p{
 /* Carousel Section */
 .carousel-image{
   margin: 5% auto;
- width: 800px;
- height: 450px;
+ width: 20%;
+ height: 27%;
  border-radius: 0.3em;
 }
 
 .carousel-inner > .carousel-item img{
-  width: 80%;
+  width: 50%;
 }
 
 hr{
