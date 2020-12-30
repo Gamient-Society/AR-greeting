@@ -122,10 +122,17 @@ p{
     opacity: 1;
 }
 
+.input-name:focus{
+  outline-color: #ee0979;
+  border-color: #ee0979;
+}
 .input-name{
   margin: 2% 0%;
 }
 
+#copyButton{
+  width: 100%;
+}
 
 /* Carousel Section */
 .carousel-image{
