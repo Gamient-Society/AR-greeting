@@ -21,7 +21,7 @@ On coming New Year🎉🎈, our website AR-greetings allows people to share digi
 - ### AR Greeting Cards:
 <p align="center"><img src="Project Snapshots/img2.jpeg" width = 80%></p>
 
--### Console View: 
+- ### Console View: 
 <p align="center"><img src="Project Snapshots/img4.png" width = 80%></p>
 
 ## How to use :
