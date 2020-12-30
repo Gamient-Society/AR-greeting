@@ -65,7 +65,7 @@ db.nameid.find(query, hints, (err, res) => {
 })
 function createTextElement(str) {
     var text = document.createElement("a-text");
-    text.setAttribute('value', 'Happy New Year \n' + str);
+    text.setAttribute('value', 'Happy BirthDay \n' + str);
     text.setAttribute('position', '0 2 -4');
     text.setAttribute('scale', '2 2 2');
     text.setAttribute('font', 'https://cdn.aframe.io/fonts/Exo2Bold.fnt')
