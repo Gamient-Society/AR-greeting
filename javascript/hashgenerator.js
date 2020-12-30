@@ -50,4 +50,5 @@ function encoder(name, length){
     key = encoder(input, length);
   });
 
+
   console.log(key);
