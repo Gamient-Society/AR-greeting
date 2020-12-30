@@ -1,6 +1,6 @@
 # AR-greetings 🎉
 
-On coming New Year🎉🎈, our website AR-greetings allows people to share digital Augmented Reality📱 Greeting Cards.So, spread love💖 and happiness to your family and friends!!
+On coming New Year🎉🎈, our website AR-greetings allows people to share digital Augmented Reality📱 Greeting Cards. So, spread love💖 and happiness to your family and friends!!
 
 ## Built with :
 - HTML
