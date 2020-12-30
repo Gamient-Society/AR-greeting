@@ -132,7 +132,10 @@ p{
 
 #copyButton{
   width: 100%;
+  transition: width 0.5s;
+
 }
+
 
 /* Carousel Section */
 .carousel-image{
