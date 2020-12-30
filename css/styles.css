@@ -178,7 +178,7 @@ hr{
 
 .colored-section{
   background-image: linear-gradient(to right, #00467F , #a5cc82);
-  border-radius: 5%;
+  border-radius: 1em;
   margin: 2% 3%;
 }
 

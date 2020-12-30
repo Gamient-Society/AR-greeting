@@ -1,69 +1,47 @@
 let key; //Var to store HashCode
-let savedName = "";
-let decoded ;
+let decoded;
 let user = 0;
 //decoderSectionSTART
 //func. to encode the input
-function setName(name){
-  savedName = name + savedName;
 
+// To generate random number
+function keyGen() {
+  let number = Math.floor(100000 + Math.random() * 900000 + user);
+  user++;
+  return number;
 }
-function encoder(name, length){
-    let temp = "";
-    let letter = '';
-    for(let i = 0 ; i<length ; i++){
-      letter = name.charAt(i);
-      let conv = letter.charCodeAt(0) & 255;
-      if(conv < 100){
-        conv = "0" + conv;
-        temp =  temp + conv ;
-      }
-      else{
-        temp = temp + conv;
-      }
 
+const db = new restdb("5fec198a823229477922c59b");
+//for generateLinkButton
+$(".input-button").click(function() {
+  let ok = ".input-name";
+  let input = $(ok).val();
+  console.log(input);
+  key = keyGen();
 
-    }
-    console.log(temp);
-    return temp;
-  }
-function keyGen(){
-    let number = Math. floor(100000 + Math. random() * 900000 + user);
-    user++;
-    return number;
-}
-//function to decode the hashKey
-  function decoder(key , length){
-    let temp = 0;
-    let decoded = "";
-
-    for(let i = 0; i < length; i++)
-      {
-        let conv = key.slice(i*3, (i*3)+3);
-        decoded = decoded + String.fromCharCode(conv);
-
-      }
-    return decoded;
-  }
-
-  //for generateLinkButton
-  $(".input-button").click(function(){
-    let ok = ".input-name";
-    let input = $(ok).val();
-    setName(input);
-    let length = input.length;
-    key = keyGen();
-    $("#path").val("");
-    $("#path").val("https://gamient-society.github.io/AR-greeting/view/?id="+ key)
-    $("#path").focus();
-    $("#path").select();
-
-    try {
-      var successful = document.execCommand('copy');
-      var msg = successful ? 'successful' : 'unsuccessful';
-      console.log('Copying text command was ' + msg);
-    } catch (err) {
-      console.log('Oops, unable to copy');
+  var obj = new db.nameid({
+    name: input,
+    id: key
+  });
+  obj.save((err, res) => {
+    if (!err) {
+      console.log(res);
     }
   });
-  console.log(key);
+
+  // To copy Generated link with a random key
+  $("#path").val("");
+  $("#path").val("https://gamient-society.github.io/AR-greeting/view/?id=" + key)
+  $("#path").focus();
+  $("#path").select();
+
+  try {
+    //var to copy text
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copying text command was ' + msg);
+  } catch (err) {
+    console.log('Oops, unable to copy');
+  }
+});
+console.log(key);
