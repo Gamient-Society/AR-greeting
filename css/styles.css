@@ -174,9 +174,6 @@ hr{
   margin: 2% 3%;
 }
 
-
-
-
 /* Footer Section */
 h6{
   color: #fff;
@@ -190,7 +187,6 @@ h6{
   margin-top: 0%;
   background-color: #000;
 }
-
 
 @media (max-width: 1028px) {
   .NewYear-card{

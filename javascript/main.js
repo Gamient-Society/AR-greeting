@@ -17,7 +17,7 @@ fetch("https://console.echoar.xyz//query?key=" + apiKey).then(res => res.json())
         if ('Balloons.glb' == out['db'][key]['hologram']['filename']) {
             const storageID = out['db'][key]['hologram']['storageID'];
             const modelFileLink = "https://console.echoar.xyz//query?key=" + apiKey + "&file=" + storageID;
-            
+
             for(var i=0;i<20;i++)
             {
                 var tempEntity = document.createElement("a-entity");
@@ -27,13 +27,13 @@ fetch("https://console.echoar.xyz//query?key=" + apiKey).then(res => res.json())
                 var randomZ = (Math.floor(Math.random()*9)-4).toString();
                 tempEntity.setAttribute("position",randomX + " " + randomY + " " + randomZ);
                 console.log(randomX + " " + randomY + " " + randomZ);
-                
+
                 // Adding animation for balloons
                 var anim = document.createElement('a-animation');
                 anim.setAttribute('attribute','position')
                 anim.setAttribute('to',randomX + " " + randomY+10 + " "+ randomZ)
                 anim.setAttribute('dur','30000')
-                tempEntity.appendChild(anim);                
+                tempEntity.appendChild(anim);
                 document.querySelector('a-scene').appendChild(tempEntity);
             }
         }
@@ -65,7 +65,7 @@ db.nameid.find(query, hints, (err, res) => {
 })
 function createTextElement(str) {
     var text = document.createElement("a-text");
-    text.setAttribute('value', 'Happy BirthDay \n' + str);
+    text.setAttribute('value', 'Happy New Year\n' + str);
     text.setAttribute('position', '0 2 -4');
     text.setAttribute('scale', '2 2 2');
     text.setAttribute('font', 'https://cdn.aframe.io/fonts/Exo2Bold.fnt')
